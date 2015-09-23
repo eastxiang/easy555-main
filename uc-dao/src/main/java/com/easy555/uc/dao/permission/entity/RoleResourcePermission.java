@@ -5,6 +5,8 @@
  */
 package com.easy555.uc.dao.permission.entity;
 
+import java.util.EnumSet;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,8 +16,12 @@ import javax.persistence.Table;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.Parameter;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 
 import com.easy555.common.entity.BaseEntity;
+import com.easy555.common.repository.hibernate.type.IntegerValuedEnumType;
 import com.easy555.common.repository.support.annotation.EnableQueryCache;
 
 /**
@@ -24,6 +30,14 @@ import com.easy555.common.repository.support.annotation.EnableQueryCache;
  * <p>Version: 1.0
  */
 
+@TypeDef(
+        name = "SetPermissionUserType",
+        typeClass = IntegerValuedEnumType.class,
+        parameters = {
+                @Parameter(name = "enum", value = "com.easy555.uc.dao.permission.entity.Permission"),
+                @Parameter(name = "defaultValue", value = "1")
+        }
+)
 @Entity
 @Table(name = "sys_role_resource_permission")
 @EnableQueryCache
@@ -46,7 +60,8 @@ public class RoleResourcePermission extends BaseEntity<Long> {
     /**
      * 权限值
      */
-    private Integer permission_val;
+    @Type(type = "SetPermissionUserType")
+    private EnumSet<Permission> permission_val;
     
 
     public RoleResourcePermission() {
@@ -72,11 +87,11 @@ public class RoleResourcePermission extends BaseEntity<Long> {
         this.resourceId = resourceId;
     }
     
-    public Integer getPermission_val() {
+    public EnumSet<Permission> getPermission_val() {
 		return permission_val;
 	}
 
-	public void setPermission_val(Integer permission_val) {
+	public void setPermission_val(EnumSet<Permission>  permission_val) {
 		this.permission_val = permission_val;
 	}
 

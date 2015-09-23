@@ -1,78 +1,24 @@
-/**
- * Copyright (c) 2005-2012 https://github.com/zhangkaitao
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- */
 package com.easy555.uc.dao.permission.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-
-import com.easy555.common.entity.BaseEntity;
-import com.easy555.common.repository.support.annotation.EnableQueryCache;
+import com.easy555.common.repository.hibernate.type.IntegerValuedEnum;
 
 /**
- * 权限表
- * <p>User: Zhang Kaitao
- * <p>Date: 13-2-4 上午9:38
- * <p>Version: 1.0
+ * 权限
+ * 
+ * xiangdong 2015.09.23
  */
-@Entity
-@Table(name = "sys_permission")
-@EnableQueryCache
-@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class Permission extends BaseEntity<Long> {
+public enum Permission implements IntegerValuedEnum {
 
-    /**
-     * 前端显示名称
-     */
-    private String name;
-    /**
-     * 系统中验证时使用的权限标识
-     */
-    private String permission;
+	Read(1), Create(2), Delete(4);
 
-    /**
-     * 详细描述
-     */
-    private String description;
+	private final Integer code;
 
-    /**
-     * 是否显示 也表示是否可用 为了统一 都使用这个
-     */
-    private Boolean visible = Boolean.FALSE;
+	Permission(final Integer code) {
+		this.code = code;
+	}
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPermission() {
-        return permission;
-    }
-
-    public void setPermission(String permission) {
-        this.permission = permission;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Boolean getVisible() {
-        return visible;
-    }
-
-    public void setVisible(Boolean show) {
-        this.visible = show;
-    }
+	@Override
+	public int getCode() {
+		return this.code;
+	}
 }

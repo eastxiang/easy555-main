@@ -5,16 +5,21 @@
  */
 package com.easy555.uc.dao.resource.entity;
 
-import com.easy555.common.entity.BaseEntity;
-import com.easy555.common.plugin.entity.Treeable;
-import com.easy555.common.repository.support.annotation.EnableQueryCache;
-import org.apache.commons.lang3.StringUtils;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.Formula;
+import java.util.EnumSet;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Parameter;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
+
+import com.easy555.common.entity.BaseEntity;
+import com.easy555.common.repository.hibernate.type.IntegerValuedEnumType;
+import com.easy555.common.repository.support.annotation.EnableQueryCache;
+import com.easy555.uc.dao.permission.entity.Permission;
 
 /**
  * <p>
@@ -24,11 +29,20 @@ import javax.persistence.Table;
  * <p>
  * Version: 1.0
  */
+
+@TypeDef(name = "SetPermissionUserType", typeClass = IntegerValuedEnumType.class, parameters = {
+		@Parameter(name = "enum", value = "com.easy555.uc.dao.permission.entity.Permission"),
+		@Parameter(name = "defaultValue", value = "1") })
 @Entity
 @Table(name = "sys_resource")
 @EnableQueryCache
 @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Resource extends BaseEntity<Long> {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8966817382538485958L;
 
 	/**
 	 * 标题
@@ -55,11 +69,12 @@ public class Resource extends BaseEntity<Long> {
 	 */
 	@Column(name = "visible")
 	private Boolean visible = Boolean.FALSE;
-	
+
 	/**
 	 * 权限值
 	 */
-	private Integer permission_val;
+	@Type(type = "SetPermissionUserType")
+	private EnumSet<Permission> permission_val;
 
 	public String getName() {
 
@@ -102,14 +117,11 @@ public class Resource extends BaseEntity<Long> {
 		this.visible = show;
 	}
 
-	public Integer getPermission_val() {
+	public EnumSet<Permission> getPermission_val() {
 		return permission_val;
 	}
 
-	public void setPermission_val(Integer permission_val) {
+	public void setPermission_val(EnumSet<Permission> permission_val) {
 		this.permission_val = permission_val;
 	}
-	
-	
-
 }

@@ -1,4 +1,4 @@
-package com.easy555.uc.dao.user;
+package com.easy555.uc.dao.entity;
 
 import org.junit.Test;
 
