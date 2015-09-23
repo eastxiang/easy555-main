@@ -43,7 +43,7 @@ public class Role extends BaseEntity<Long> {
 
 
     /**
-     * 用户 组织机构 工作职务关联表
+     * 用户拥有的资源权限
      */
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, targetEntity = RoleResourcePermission.class, mappedBy = "role", orphanRemoval = true)
     @Fetch(FetchMode.SELECT)

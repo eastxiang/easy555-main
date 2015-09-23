@@ -33,11 +33,13 @@ public class RoleService extends BaseService<Role, Long> {
         for (int i = 0, l = localResourcePermissions.size(); i < l; i++) {
             RoleResourcePermission localResourcePermission = localResourcePermissions.get(i);
             localResourcePermission.setRole(role);
+            
             RoleResourcePermission dbResourcePermission = findRoleResourcePermission(localResourcePermission);
+           
             if (dbResourcePermission != null) {//出现在先删除再添加的情况
                 dbResourcePermission.setRole(localResourcePermission.getRole());
                 dbResourcePermission.setResourceId(localResourcePermission.getResourceId());
-                dbResourcePermission.setPermissionIds(localResourcePermission.getPermissionIds());
+                dbResourcePermission.setPermission_val(localResourcePermission.getPermission_val());
                 localResourcePermissions.set(i, dbResourcePermission);
             }
         }
@@ -55,7 +57,7 @@ public class RoleService extends BaseService<Role, Long> {
      * @param roleIds
      * @return
      */
-    public Set<Role> findShowRoles(Set<Long> roleIds) {
+    public Set<Role> findAvailableRoles(Set<Long> roleIds) {
 
         Set<Role> roles = Sets.newHashSet();
 

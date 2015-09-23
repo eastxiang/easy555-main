@@ -7,6 +7,7 @@ package org.apache.shiro.web.filter.online;
 
 import com.easy555.common.Constants;
 import com.easy555.uc.dao.user.entity.User;
+
 import org.apache.shiro.ShiroConstants;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.OnlineSession;

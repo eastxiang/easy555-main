@@ -31,7 +31,7 @@ import com.easy555.common.repository.support.annotation.EnableQueryCache;
  */
 
 @TypeDef(name = "SetPermissionUserType", typeClass = IntegerValuedEnumType.class, parameters = {
-		@Parameter(name = "enum", value = "com.easy555.uc.dao.permission.entity.Permission"),
+		@Parameter(name = "enum", value = "com.easy555.common.entity.Permission"),
 		@Parameter(name = "defaultValue", value = "1") })
 @Entity
 @Table(name = "sys_resource")

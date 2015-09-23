@@ -16,6 +16,6 @@ import org.springframework.stereotype.Service;
  * <p>Version: 1.0
  */
 @Service
-public class PermissionService extends BaseService<Permission, Long> {
+public class PermissionService {
 
 }

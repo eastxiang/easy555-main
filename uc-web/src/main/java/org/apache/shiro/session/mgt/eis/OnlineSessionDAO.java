@@ -5,8 +5,8 @@
  */
 package org.apache.shiro.session.mgt.eis;
 
-import com.easy555.uc.dao.user.entity.UserOnline;
-import com.easy555.uc.service.user.UserOnlineService;
+import java.io.Serializable;
+import java.util.Date;
 
 import org.apache.shiro.ShiroConstants;
 import org.apache.shiro.session.Session;
@@ -14,8 +14,8 @@ import org.apache.shiro.session.mgt.OnlineSession;
 import org.apache.shiro.session.mgt.OnlineSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.io.Serializable;
-import java.util.Date;
+import com.easy555.uc.dao.user.entity.UserOnline;
+import com.easy555.uc.service.user.UserOnlineService;
 
 /**
  * 对于db的操作 考虑使用 异步+队列机制

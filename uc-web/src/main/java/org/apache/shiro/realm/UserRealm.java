@@ -24,6 +24,7 @@ import org.springframework.context.ApplicationContext;
 
 import com.easy555.common.repository.support.SimpleBaseRepositoryFactoryBean;
 import com.easy555.uc.dao.user.entity.User;
+
 import com.easy555.uc.service.user.exception.UserBlockedException;
 import com.easy555.uc.service.user.exception.UserException;
 import com.easy555.uc.service.user.exception.UserNotExistsException;
