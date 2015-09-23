@@ -13,6 +13,7 @@ public class IndexController {
     	
 		model.addAttribute("message", "test");
 		
+		
         return "index";
     } 
 }
