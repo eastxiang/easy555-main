@@ -17,9 +17,9 @@ import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
 import com.easy555.common.entity.BaseEntity;
+import com.easy555.common.entity.Permission;
 import com.easy555.common.repository.hibernate.type.IntegerValuedEnumType;
 import com.easy555.common.repository.support.annotation.EnableQueryCache;
-import com.easy555.uc.dao.permission.entity.Permission;
 
 /**
  * <p>

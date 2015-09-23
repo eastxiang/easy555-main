@@ -5,8 +5,8 @@
  */
 package com.easy555.uc.dao.permission.repository;
 
+import com.easy555.common.entity.Permission;
 import com.easy555.common.repository.BaseRepository;
-import com.easy555.uc.dao.permission.entity.Permission;
 
 /**
  * <p>User: Zhang Kaitao

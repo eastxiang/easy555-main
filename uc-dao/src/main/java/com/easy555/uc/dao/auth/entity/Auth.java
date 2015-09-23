@@ -5,19 +5,29 @@
  */
 package com.easy555.uc.dao.auth.entity;
 
+import java.util.EnumSet;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Parameter;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 
 import com.easy555.common.entity.BaseEntity;
+import com.easy555.common.entity.Permission;
+import com.easy555.common.repository.hibernate.type.IntegerValuedEnumType;
 import com.easy555.common.repository.support.annotation.EnableQueryCache;
 
 /**
  * 用户权限数据
  */
 
+@TypeDef(name = "SetPermissionUserType", typeClass = IntegerValuedEnumType.class, parameters = {
+		@Parameter(name = "enum", value = "com.easy555.uc.dao.permission.entity.Permission"),
+		@Parameter(name = "defaultValue", value = "1") })
 @Entity
 @Table(name = "sys_auth")
 @EnableQueryCache
@@ -35,31 +45,33 @@ public class Auth extends BaseEntity<Long> {
 	 */
 	@Column(name = "user_id")
 	private Long userId = 0L;
-	
+
 	/**
-     * 资源id
-     */
-    @Column(name = "resource_id")
-    private Long resourceId;
-	
+	 * 资源id
+	 */
+	@Column(name = "resource_id")
+	private Long resourceId;
 
 	/**
 	 * 用户拥有角色权限只之和
 	 */
-    @Column(name = "sum_role_perm_val")
-	private Integer sumRolePermVal = 0;
+	@Column(name = "sum_role_perm_val")
+	@Type(type = "SetPermissionUserType")
+	private EnumSet<Permission> sumRolePermVal;
 
 	/**
 	 * 用户增加的特别权限
 	 */
-    @Column(name = "user_add_perm_val")
-	private Integer userAddPermVal = 0;
+	@Column(name = "user_add_perm_val")
+	@Type(type = "SetPermissionUserType")
+	private EnumSet<Permission> userAddPermVal;
 
 	/**
 	 * 用户减少的特别权限
 	 */
-    @Column(name = "user_sub_perm_val")
-	private Integer userSubPermVal = 0;
+	@Column(name = "user_sub_perm_val")
+	@Type(type = "SetPermissionUserType")
+	private EnumSet<Permission> userSubPermVal;
 
 	public Long getOrganizationId() {
 		return organizationId;
@@ -85,28 +97,28 @@ public class Auth extends BaseEntity<Long> {
 		this.resourceId = resourceId;
 	}
 
-	public Integer getSumRolePermVal() {
+	public EnumSet<Permission> getSumRolePermVal() {
 		return sumRolePermVal;
 	}
 
-	public void setSumRolePermVal(Integer sumRolePermVal) {
+	public void setSumRolePermVal(EnumSet<Permission> sumRolePermVal) {
 		this.sumRolePermVal = sumRolePermVal;
 	}
 
-	public Integer getUserAddPermVal() {
+	public EnumSet<Permission> getUserAddPermVal() {
 		return userAddPermVal;
 	}
 
-	public void setUserAddPermVal(Integer userAddPermVal) {
+	public void setUserAddPermVal(EnumSet<Permission> userAddPermVal) {
 		this.userAddPermVal = userAddPermVal;
 	}
 
-	public Integer getUserSubPermVal() {
+	public EnumSet<Permission> getUserSubPermVal() {
 		return userSubPermVal;
 	}
 
-	public void setUserSubPermVal(Integer userSubPermVal) {
+	public void setUserSubPermVal(EnumSet<Permission> userSubPermVal) {
 		this.userSubPermVal = userSubPermVal;
 	}
-	
+
 }

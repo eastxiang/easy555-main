@@ -1,4 +1,4 @@
-package com.easy555.uc.dao.permission.entity;
+package com.easy555.common.entity;
 
 import com.easy555.common.repository.hibernate.type.IntegerValuedEnum;
 

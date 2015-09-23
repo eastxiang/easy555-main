@@ -6,9 +6,9 @@
 package com.easy555.uc.controller.permission;
 
 import com.easy555.common.Constants;
+import com.easy555.common.entity.Permission;
 import com.easy555.common.entity.enums.AvailableEnum;
 import com.easy555.common.web.controller.BaseCRUDController;
-import com.easy555.uc.dao.permission.entity.Permission;
 import com.easy555.uc.service.permission.PermissionService;
 
 import org.springframework.beans.factory.annotation.Autowired;
