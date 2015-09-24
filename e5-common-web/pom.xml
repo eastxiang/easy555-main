@@ -2,12 +2,12 @@
 	<parent>
 		<groupId>com.easy555</groupId>
 		<artifactId>easy555-main</artifactId>
-		<version>0.1</version>
+		<version>0.2-SNAPSHOT</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>e5-common-web</artifactId>
-	<version>0.1</version>
+	<version>0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>easy555 common-web</name>
