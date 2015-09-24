@@ -1,16 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<parent>
 		<groupId>com.easy555</groupId>
 		<artifactId>easy555-main</artifactId>
-		<version>0.1-SNAPSHOT</version>
+		<version>0.1</version>
 	</parent>
 	
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>uc-web</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<name>easy555 uc-web</name>
 	<url>www.easy555.com</url>
 
@@ -18,13 +17,13 @@
 		<dependency>
 			<groupId>com.easy555</groupId>
 			<artifactId>e5-common-web</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.easy555</groupId>
 			<artifactId>uc-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.1</version>
 		</dependency>
 
 		<dependency>
@@ -102,7 +101,7 @@
 				<jpa.databasePlatform>org.hibernate.dialect.MySQL5InnoDBDialect</jpa.databasePlatform>
 				<log.dir>target/logs/e5</log.dir>
 
-				<shiro.uid.cookie.domain></shiro.uid.cookie.domain>
+				<shiro.uid.cookie.domain />
 				<shiro.uid.cookie.path>/</shiro.uid.cookie.path>
 			</properties>
 		</profile>
