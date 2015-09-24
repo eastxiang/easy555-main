@@ -5,12 +5,12 @@
 		<groupId>com.easy555</groupId>
 		<artifactId>easy555-main</artifactId>
 		<version>0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>uc-web</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>easy555 uc-web</name>
 	<url>www.easy555.com</url>
 
@@ -18,13 +18,13 @@
 		<dependency>
 			<groupId>com.easy555</groupId>
 			<artifactId>e5-common-web</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.easy555</groupId>
 			<artifactId>uc-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 
 		<dependency>
