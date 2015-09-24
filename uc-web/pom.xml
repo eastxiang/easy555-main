@@ -3,11 +3,10 @@
 
 	<parent>
 		<groupId>com.easy555</groupId>
-		<artifactId>easy555-parent</artifactId>
+		<artifactId>easy555-main</artifactId>
 		<version>0.1-SNAPSHOT</version>
-		<relativePath></relativePath>
 	</parent>
-
+	
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>uc-web</artifactId>
 	<packaging>war</packaging>
@@ -67,7 +66,7 @@
 				</dependencies>
 			</plugin>
 		</plugins>
-		
+
 		<!-- 只有设置这个才能替换变量 xiangdong -->
 		<resources>
 			<resource>

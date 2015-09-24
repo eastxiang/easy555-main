@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
 		<groupId>com.easy555</groupId>
-		<artifactId>easy555-parent</artifactId>
+		<artifactId>easy555-main</artifactId>
 		<version>0.1-SNAPSHOT</version>
 	</parent>
 
@@ -15,6 +15,9 @@
 	<url>www.easy555.com</url>
 
 	<dependencies>
-		
+		<dependency>
+			<groupId>com.easy555</groupId>
+			<artifactId>e5-common</artifactId>
+		</dependency>
 	</dependencies>
 </project>
