@@ -6,11 +6,12 @@
 		<groupId>com.easy555</groupId>
 		<artifactId>easy555-parent</artifactId>
 		<version>0.5-SNAPSHOT</version>
+		<relativePath></relativePath>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>easy555-main</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>main</name>
 	<url>www.easy555.com</url>

@@ -8,8 +8,6 @@ package com.easy555.uc.dao.auth.repository;
 import com.easy555.common.repository.BaseRepository;
 import com.easy555.uc.dao.auth.entity.Auth;
 
-import java.util.Set;
-
 /**
  * <p>User: Zhang Kaitao
  * <p>Date: 13-2-4 下午3:00
@@ -18,9 +16,4 @@ import java.util.Set;
 public interface AuthRepository extends BaseRepository<Auth, Long> {
 
     Auth findByUserId(Long userId);
-
-
-    ///////////委托给AuthRepositoryImpl实现
-    public Set<Long> findRoleIds(Long userId, Set<Long> groupIds, Set<Long> organizationIds, Set<Long> jobIds, Set<Long[]> organizationJobIds);
-
 }

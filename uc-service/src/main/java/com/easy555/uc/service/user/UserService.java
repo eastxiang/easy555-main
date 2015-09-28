@@ -71,7 +71,7 @@ public class UserService extends BaseService<User, Long> {
 
 		return super.update(user);
 	}
-	
+
 	public User findByUsername(String username) {
 		if (StringUtils.isEmpty(username)) {
 			return null;

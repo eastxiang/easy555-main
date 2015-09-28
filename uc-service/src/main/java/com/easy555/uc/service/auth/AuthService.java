@@ -29,34 +29,6 @@ public class AuthService extends BaseService<Auth, Long> {
 	@Autowired
 	private UserService userService;
 
-	private AuthRepository getAuthRepository() {
-		return (AuthRepository) baseRepository;
-	}
-
-	public void addUserAuth(Long[] userIds, Auth m) {
-
-		if (ArrayUtils.isEmpty(userIds)) {
-			return;
-		}
-
-		for (Long userId : userIds) {
-
-			User user = userService.findOne(userId);
-			if (user == null) {
-				continue;
-			}
-
-			// Auth auth = getAuthRepository().findByUserId(userId);
-			// if (auth != null) {
-			// auth.addRoleIds(m.getRoleIds());
-			// continue;
-			// }
-			// auth = new Auth();
-			// auth.setUserId(userId);
-			// auth.setType(m.getType());
-			// auth.setRoleIds(m.getRoleIds());
-			// save(auth);
-		}
-	}
+	
 
 }
