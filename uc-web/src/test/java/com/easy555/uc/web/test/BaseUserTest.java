@@ -3,14 +3,15 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.service.user;
+package com.easy555.uc.web.test;
 
 import org.junit.After;
 import org.junit.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.easy555.uc.dao.user.entity.User;
-import com.easy555.uc.service.test.BaseTest;
+import com.easy555.uc.service.user.PasswordService;
+import com.easy555.uc.service.user.UserService;
 
 /**
  * <p>
