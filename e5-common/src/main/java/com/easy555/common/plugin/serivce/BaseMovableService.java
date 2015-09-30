@@ -201,7 +201,7 @@ public abstract class BaseMovableService<M extends BaseEntity & Movable, ID exte
         from.setWeight(newWeight);
     }
 
-    public void reweight() {
+	public void reweight() {
         int batchSize = 100;
         Sort sort = new Sort(Sort.Direction.DESC, "weight");
         Pageable pageable = new PageRequest(0, batchSize, sort);
