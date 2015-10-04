@@ -7,7 +7,6 @@ package com.easy555.uc.dao.resource.entity;
 
 import java.util.EnumSet;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -67,8 +66,7 @@ public class Resource extends BaseEntity<Long> {
 	/**
 	 * 是否显示
 	 */
-	@Column(name = "visible")
-	private Boolean visible = Boolean.FALSE;
+	private Boolean status = Boolean.FALSE;
 
 	/**
 	 * 权限值
@@ -109,12 +107,12 @@ public class Resource extends BaseEntity<Long> {
 		this.icon = icon;
 	}
 
-	public Boolean getVisible() {
-		return visible;
+	public Boolean getStatus() {
+		return status;
 	}
 
-	public void setVisible(Boolean show) {
-		this.visible = show;
+	public void setStatus(Boolean status) {
+		this.status = status;
 	}
 
 	public EnumSet<Permission> getPermission_val() {

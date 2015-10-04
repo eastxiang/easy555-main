@@ -5,90 +5,208 @@
  */
 package com.easy555.uc.dao.resource.entity;
 
-import com.google.common.collect.Lists;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-import java.io.Serializable;
-import java.util.List;
+import org.apache.commons.lang3.StringUtils;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Formula;
+
+import com.easy555.common.entity.BaseEntity;
+import com.easy555.common.plugin.entity.Treeable;
+import com.easy555.common.repository.support.annotation.EnableQueryCache;
 
 /**
- * 界面是那个使用的菜单对象
- * <p>User: Zhang Kaitao
- * <p>Date: 13-4-9 下午4:20
- * <p>Version: 1.0
+ * 菜单
+ * 
+ * create date: 2015年10月4日 下午3:33:21
+ * 
+ * @author xiangdong
  */
-public class Menu implements Serializable {
-    private Long id;
-    private String name;
-    private String icon;
-    private String url;
+@Entity
+@Table(name = "sys_menu")
+@EnableQueryCache
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+public class Menu extends BaseEntity<Long>implements Treeable<Long> {
 
-    private List<Menu> children;
+	/**
+	 * 标题
+	 */
+	private String name;
 
-    public Menu(Long id, String name, String icon, String url) {
-        this.id = id;
-        this.name = name;
-        this.icon = icon;
-        this.url = url;
-    }
+	/**
+	 * 菜单类型
+	 */
+	private Boolean menuType;
+	/**
+	 * 父路径
+	 */
+	@Column(name = "parent_id")
+	private Long parentId;
 
-    public Long getId() {
-        return id;
-    }
+	@Column(name = "parent_ids")
+	private String parentIds;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	/**
+	 * 权重
+	 */
+	private Integer weight;
 
-    public String getName() {
-        return name;
-    }
+	/**
+	 * 图标
+	 */
+	private String icon;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	/**
+	 * 是否显示
+	 */
+	private Boolean status = Boolean.FALSE;
 
-    public String getIcon() {
-        return icon;
-    }
+	/**
+	 * 是否有叶子节点
+	 */
+	@Formula(value = "(select count(1) from sys_menu m where m.parent_id = id)")
+	private boolean hasChildren;
 
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
+	public Menu() {
+	}
 
-    public String getUrl() {
-        return url;
-    }
+	public Menu(Long id) {
+		setId(id);
+	}
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public List<Menu> getChildren() {
-        if (children == null) {
-            children = Lists.newArrayList();
-        }
-        return children;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setChildren(List<Menu> children) {
-        this.children = children;
-    }
+	public Boolean getMenuType() {
+		return menuType;
+	}
 
-    /**
-     * @return
-     */
-    public boolean isHasChildren() {
-        return !getChildren().isEmpty();
-    }
+	public void setMenuType(Boolean menuType) {
+		this.menuType = menuType;
+	}
 
-    @Override
-    public String toString() {
-        return "Menu{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", icon='" + icon + '\'' +
-                ", url='" + url + '\'' +
-                ", children=" + children +
-                '}';
-    }
+	public Long getParentId() {
+		return parentId;
+	}
+
+	public void setParentId(Long parentId) {
+		this.parentId = parentId;
+	}
+
+	public String getParentIds() {
+		return parentIds;
+	}
+
+	public void setParentIds(String parentIds) {
+		this.parentIds = parentIds;
+	}
+
+	@Override
+	public String makeSelfAsNewParentIds() {
+		return getParentIds() + getId() + getSeparator();
+	}
+
+	@Override
+	public String getSeparator() {
+		return "/";
+	}
+
+	public Integer getWeight() {
+		return weight;
+	}
+
+	public void setWeight(Integer weight) {
+		this.weight = weight;
+	}
+
+	public String getIcon() {
+		if (!StringUtils.isEmpty(icon)) {
+			return icon;
+		}
+		if (isRoot()) {
+			return getRootDefaultIcon();
+		}
+		if (isLeaf()) {
+			return getLeafDefaultIcon();
+		}
+		return getBranchDefaultIcon();
+	}
+
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
+
+	@Override
+	public boolean isRoot() {
+		if (getParentId() != null && getParentId() == 0) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean isLeaf() {
+		if (isRoot()) {
+			return false;
+		}
+		if (isHasChildren()) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public Boolean getStatus() {
+		return status;
+	}
+
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
+
+	public boolean isHasChildren() {
+		return hasChildren;
+	}
+
+	public void setHasChildren(boolean hasChildren) {
+		this.hasChildren = hasChildren;
+	}
+
+	/**
+	 * 根节点默认图标 如果没有默认 空即可
+	 *
+	 * @return
+	 */
+	@Override
+	public String getRootDefaultIcon() {
+		return "ztree_root_open";
+	}
+
+	/**
+	 * 树枝节点默认图标 如果没有默认 空即可
+	 *
+	 * @return
+	 */
+	@Override
+	public String getBranchDefaultIcon() {
+		return "ztree_branch";
+	}
+
+	/**
+	 * 树叶节点默认图标 如果没有默认 空即可
+	 *
+	 * @return
+	 */
+	@Override
+	public String getLeafDefaultIcon() {
+		return "ztree_leaf";
+	}
+
 }

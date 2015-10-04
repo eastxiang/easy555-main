@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.easy555.common.service.BaseService;
-import com.easy555.uc.dao.auth.entity.Auth;
-import com.easy555.uc.dao.auth.repository.AuthRepository;
+import com.easy555.uc.dao.permission.entity.UserPermission;
+import com.easy555.uc.dao.permission.repository.UserPermissionRepository;
 import com.easy555.uc.dao.user.entity.User;
 import com.easy555.uc.service.user.UserService;
 
@@ -24,7 +24,7 @@ import com.easy555.uc.service.user.UserService;
  * Version: 1.0
  */
 @Service
-public class AuthService extends BaseService<Auth, Long> {
+public class AuthService extends BaseService<UserPermission, Long> {
 
 	@Autowired
 	private UserService userService;

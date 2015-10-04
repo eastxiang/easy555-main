@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.dao.auth.entity;
+package com.easy555.uc.dao.permission.entity;
 
 import java.util.EnumSet;
 
@@ -32,7 +32,7 @@ import com.easy555.common.repository.support.annotation.EnableQueryCache;
 @Table(name = "sys_auth")
 @EnableQueryCache
 @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class Auth extends BaseEntity<Long> {
+public class UserPermission extends BaseEntity<Long> {
 
 	/**
 	 * 组织机构

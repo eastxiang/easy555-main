@@ -24,7 +24,6 @@ public class ResourceTest extends BaseTest {
 		resource.setIdentity("wecome");
 		resource.setName("xd");
 		resource.setUrl("/wecome");
-		resource.setVisible(true);
 		resource.setPermission_val(EnumSet.of(Permission.Create, Permission.Delete));
 		resource.setIcon("11");
 
