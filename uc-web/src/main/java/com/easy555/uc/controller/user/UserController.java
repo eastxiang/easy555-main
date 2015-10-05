@@ -32,7 +32,7 @@ import com.easy555.common.web.controller.BaseCRUDController;
 import com.easy555.common.web.validate.ValidateResponse;
 import com.easy555.uc.dao.organization.entity.User;
 import com.easy555.uc.dao.organization.entity.UserStatus;
-import com.easy555.uc.service.user.UserService;
+import com.easy555.uc.service.organization.UserService;
 
 /**
  * <p>User: Zhang Kaitao

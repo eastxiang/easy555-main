@@ -29,7 +29,7 @@ create table sys_organization(
   parent_ids  				varchar(200) default '',
   icon       				varchar(200),
   weight    				int,
-  visible       			bool,
+  status	       			bool,
   constraint pk_sys_organization primary key(id),
   index idx_sys_organization_name (name),
   index idx_sys_organization_parent_id (parent_id),
@@ -116,17 +116,13 @@ alter table sys_menu auto_increment=1000;
 
 
 create table sys_user_role(
-  id						bigint not null auto_increment,
   user_id					bigint not null,
   role_id					bigint not null,
-  constraint pk_user_role primary key(id),
-  index idx_sys_user_role_user_id (user_id)
+  constraint pk_user_role primary key(user_id, role_id)
 ) charset=utf8 ENGINE=InnoDB;
-alter table sys_role auto_increment=1000;
 
 
 create table sys_role_resource_permission(
-  id         				bigint not null auto_increment,
   role_id   				bigint,
   resource_id 				bigint,
   permission_val 			int,

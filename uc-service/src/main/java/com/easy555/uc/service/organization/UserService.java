@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.service.user;
+package com.easy555.uc.service.organization;
 
 import java.util.Date;
 import java.util.Map;
@@ -20,10 +20,10 @@ import com.easy555.common.service.BaseService;
 import com.easy555.uc.dao.organization.entity.User;
 import com.easy555.uc.dao.organization.entity.UserStatus;
 import com.easy555.uc.dao.organization.repository.UserRepository;
-import com.easy555.uc.service.user.exception.UserBlockedException;
-import com.easy555.uc.service.user.exception.UserNotExistsException;
-import com.easy555.uc.service.user.exception.UserPasswordNotMatchException;
-import com.easy555.uc.service.user.utils.UserLogUtils;
+import com.easy555.uc.service.organization.exception.UserBlockedException;
+import com.easy555.uc.service.organization.exception.UserNotExistsException;
+import com.easy555.uc.service.organization.exception.UserPasswordNotMatchException;
+import com.easy555.uc.service.organization.utils.UserLogUtils;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;

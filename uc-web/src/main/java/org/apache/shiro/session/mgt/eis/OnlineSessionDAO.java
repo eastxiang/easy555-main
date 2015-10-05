@@ -15,7 +15,7 @@ import org.apache.shiro.session.mgt.OnlineSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.easy555.uc.dao.organization.entity.UserOnline;
-import com.easy555.uc.service.user.UserOnlineService;
+import com.easy555.uc.service.organization.UserOnlineService;
 
 /**
  * 对于db的操作 考虑使用 异步+队列机制

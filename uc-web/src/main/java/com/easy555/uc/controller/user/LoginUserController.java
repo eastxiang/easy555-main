@@ -20,9 +20,9 @@ import com.easy555.common.web.bind.annotation.CurrentUser;
 import com.easy555.common.web.controller.BaseController;
 import com.easy555.uc.dao.organization.entity.User;
 import com.easy555.uc.dao.organization.entity.UserStatus;
-import com.easy555.uc.service.user.PasswordService;
-import com.easy555.uc.service.user.UserLastOnlineService;
-import com.easy555.uc.service.user.UserService;
+import com.easy555.uc.service.organization.PasswordService;
+import com.easy555.uc.service.organization.UserLastOnlineService;
+import com.easy555.uc.service.organization.UserService;
 
 /**
  * 登录用户的个人信息

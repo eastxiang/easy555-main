@@ -65,7 +65,7 @@ public class Organization extends BaseEntity<Long> implements Treeable<Long> {
     /**
      * 是否显示
      */
-    private Boolean visible = Boolean.FALSE;
+    private Boolean status = Boolean.FALSE;
 
     public Organization() {
     }
@@ -171,12 +171,12 @@ public class Organization extends BaseEntity<Long> implements Treeable<Long> {
         this.hasChildren = hasChildren;
     }
 
-    public Boolean getVisible() {
-        return visible;
+    public Boolean getStatus() {
+        return status;
     }
 
-    public void setVisible(Boolean show) {
-        this.visible = show;
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 
 

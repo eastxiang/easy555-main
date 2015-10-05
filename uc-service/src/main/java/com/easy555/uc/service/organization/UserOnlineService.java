@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.service.user;
+package com.easy555.uc.service.organization;
 
 import java.util.Date;
 import java.util.List;
@@ -47,11 +47,6 @@ public class UserOnlineService extends BaseService<UserOnline, String> {
         if (userOnline != null) {
             delete(userOnline);
         }
-        //游客 无需记录上次访问记录
-        //此处使用数据库的触发器完成同步
-//        if(userOnline.getUserId() == null) {
-//            userLastOnlineService.lastOnline(UserLastOnline.fromUserOnline(userOnline));
-//        }
     }
 
     /**

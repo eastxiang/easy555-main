@@ -172,7 +172,8 @@ public class Menu extends BaseEntity<Long>implements Treeable<Long> {
 	}
 
 	public boolean isHasChildren() {
-		return hasChildren;
+		//menuType = false 表示是资源，不是子菜单，没有下一级
+		return menuType ? hasChildren : false;
 	}
 
 	public void setHasChildren(boolean hasChildren) {

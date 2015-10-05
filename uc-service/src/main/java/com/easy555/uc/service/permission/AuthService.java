@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.service.auth;
+package com.easy555.uc.service.permission;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import com.easy555.common.service.BaseService;
 import com.easy555.uc.dao.organization.entity.User;
 import com.easy555.uc.dao.permission.entity.UserPermission;
 import com.easy555.uc.dao.permission.repository.UserPermissionRepository;
-import com.easy555.uc.service.user.UserService;
+import com.easy555.uc.service.organization.UserService;
 
 /**
  * <p>

@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.service.auth;
+package com.easy555.uc.service.permission;
 
 import java.util.Set;
 
@@ -13,8 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.easy555.uc.dao.organization.entity.User;
 import com.easy555.uc.dao.permission.entity.Role;
-import com.easy555.uc.service.permission.RoleService;
-import com.easy555.uc.service.resource.ResourceService;
+import com.easy555.uc.service.integration.ResourceService;
 import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.Sets;

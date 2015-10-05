@@ -36,7 +36,7 @@ public class OrganizationService extends BaseTreeableService<Organization, Long>
         while (iter1.hasNext()) {
             Long id = iter1.next();
             Organization o = findOne(id);
-            if (o == null || Boolean.FALSE.equals(o.getVisible())) {
+            if (o == null || Boolean.FALSE.equals(o.getStatus())) {
                 iter1.remove();
             }
         }
@@ -46,7 +46,7 @@ public class OrganizationService extends BaseTreeableService<Organization, Long>
         while (iter2.hasNext()) {
             Long id = iter2.next()[0];
             Organization o = findOne(id);
-            if (o == null || Boolean.FALSE.equals(o.getVisible())) {
+            if (o == null || Boolean.FALSE.equals(o.getStatus())) {
                 iter2.remove();
             }
         }

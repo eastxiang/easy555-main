@@ -41,21 +41,10 @@ public class Role extends BaseEntity<Long> {
      */
     private String description;
 
-
-    /**
-     * 用户拥有的资源权限
-     */
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, targetEntity = RoleResourcePermission.class, mappedBy = "role", orphanRemoval = true)
-    @Fetch(FetchMode.SELECT)
-    @Basic(optional = true, fetch = FetchType.EAGER)
-    @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)//集合缓存
-    @OrderBy
-    private List<RoleResourcePermission> resourcePermissions;
-
     /**
      * 是否显示 也表示是否可用 为了统一 都使用这个
      */
-    private Boolean visible = Boolean.FALSE;
+    private Boolean status = Boolean.FALSE;
     
 
     public String getName() {
@@ -82,27 +71,11 @@ public class Role extends BaseEntity<Long> {
         this.description = description;
     }
 
-    public List<RoleResourcePermission> getResourcePermissions() {
-        if (resourcePermissions == null) {
-            resourcePermissions = Lists.newArrayList();
-        }
-        return resourcePermissions;
+    public Boolean getStatus() {
+        return status;
     }
 
-    public void setResourcePermissions(List<RoleResourcePermission> resourcePermissions) {
-        this.resourcePermissions = resourcePermissions;
-    }
-
-    public void addResourcePermission(RoleResourcePermission roleResourcePermission) {
-        roleResourcePermission.setRole(this);
-        getResourcePermissions().add(roleResourcePermission);
-    }
-
-    public Boolean getVisible() {
-        return visible;
-    }
-
-    public void setVisible(Boolean show) {
-        this.visible = show;
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 }

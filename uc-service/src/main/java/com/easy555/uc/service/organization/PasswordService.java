@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.service.user;
+package com.easy555.uc.service.organization;
 
 import javax.annotation.PostConstruct;
 
@@ -13,9 +13,9 @@ import org.springframework.stereotype.Service;
 
 import com.easy555.common.utils.security.Md5Utils;
 import com.easy555.uc.dao.organization.entity.User;
-import com.easy555.uc.service.user.exception.UserPasswordNotMatchException;
-import com.easy555.uc.service.user.exception.UserPasswordRetryLimitExceedException;
-import com.easy555.uc.service.user.utils.UserLogUtils;
+import com.easy555.uc.service.organization.exception.UserPasswordNotMatchException;
+import com.easy555.uc.service.organization.exception.UserPasswordRetryLimitExceedException;
+import com.easy555.uc.service.organization.utils.UserLogUtils;
 
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;

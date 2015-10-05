@@ -11,11 +11,11 @@ import org.junit.Test;
 
 import com.easy555.uc.dao.organization.entity.User;
 import com.easy555.uc.dao.organization.entity.UserStatus;
+import com.easy555.uc.service.organization.exception.UserBlockedException;
+import com.easy555.uc.service.organization.exception.UserNotExistsException;
+import com.easy555.uc.service.organization.exception.UserPasswordNotMatchException;
+import com.easy555.uc.service.organization.exception.UserPasswordRetryLimitExceedException;
 import com.easy555.uc.service.test.BaseUserTest;
-import com.easy555.uc.service.user.exception.UserBlockedException;
-import com.easy555.uc.service.user.exception.UserNotExistsException;
-import com.easy555.uc.service.user.exception.UserPasswordNotMatchException;
-import com.easy555.uc.service.user.exception.UserPasswordRetryLimitExceedException;
 
 /**
  * <p>User: Zhang Kaitao

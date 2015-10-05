@@ -10,8 +10,8 @@ import org.junit.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.easy555.uc.dao.organization.entity.User;
-import com.easy555.uc.service.user.PasswordService;
-import com.easy555.uc.service.user.UserService;
+import com.easy555.uc.service.organization.PasswordService;
+import com.easy555.uc.service.organization.UserService;
 
 /**
  * <p>

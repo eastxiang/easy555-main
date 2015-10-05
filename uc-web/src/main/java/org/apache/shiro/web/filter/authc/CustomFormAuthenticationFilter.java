@@ -12,7 +12,7 @@ import org.apache.shiro.authc.AuthenticationException;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.easy555.uc.dao.organization.entity.User;
-import com.easy555.uc.service.user.UserService;
+import com.easy555.uc.service.organization.UserService;
 
 /**
  * 基于几点修改：
