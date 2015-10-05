@@ -13,9 +13,9 @@ import org.springframework.stereotype.Service;
 
 import com.easy555.common.entity.search.Searchable;
 import com.easy555.common.service.BaseService;
-import com.easy555.uc.dao.user.entity.User;
-import com.easy555.uc.dao.user.entity.UserStatus;
-import com.easy555.uc.dao.user.entity.UserStatusHistory;
+import com.easy555.uc.dao.organization.entity.User;
+import com.easy555.uc.dao.organization.entity.UserStatus;
+import com.easy555.uc.dao.organization.entity.UserStatusHistory;
 
 /**
  * <p>User: Zhang Kaitao

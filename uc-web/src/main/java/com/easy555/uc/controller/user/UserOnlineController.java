@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.easy555.common.entity.search.Searchable;
 import com.easy555.common.utils.MessageUtils;
 import com.easy555.common.web.controller.BaseCRUDController;
-import com.easy555.uc.dao.user.entity.UserOnline;
+import com.easy555.uc.dao.organization.entity.UserOnline;
 
 /**
  * <p>User: Zhang Kaitao

@@ -9,8 +9,8 @@ package com.easy555.uc.service.user;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.easy555.uc.dao.user.entity.User;
-import com.easy555.uc.dao.user.entity.UserStatus;
+import com.easy555.uc.dao.organization.entity.User;
+import com.easy555.uc.dao.organization.entity.UserStatus;
 import com.easy555.uc.service.test.BaseUserTest;
 import com.easy555.uc.service.user.exception.UserBlockedException;
 import com.easy555.uc.service.user.exception.UserNotExistsException;

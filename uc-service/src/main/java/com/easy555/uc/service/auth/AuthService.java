@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.easy555.common.service.BaseService;
+import com.easy555.uc.dao.organization.entity.User;
 import com.easy555.uc.dao.permission.entity.UserPermission;
 import com.easy555.uc.dao.permission.repository.UserPermissionRepository;
-import com.easy555.uc.dao.user.entity.User;
 import com.easy555.uc.service.user.UserService;
 
 /**

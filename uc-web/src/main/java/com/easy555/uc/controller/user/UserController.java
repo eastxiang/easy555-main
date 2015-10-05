@@ -30,8 +30,8 @@ import com.easy555.common.web.bind.annotation.CurrentUser;
 import com.easy555.common.web.bind.annotation.PageableDefaults;
 import com.easy555.common.web.controller.BaseCRUDController;
 import com.easy555.common.web.validate.ValidateResponse;
-import com.easy555.uc.dao.user.entity.User;
-import com.easy555.uc.dao.user.entity.UserStatus;
+import com.easy555.uc.dao.organization.entity.User;
+import com.easy555.uc.dao.organization.entity.UserStatus;
 import com.easy555.uc.service.user.UserService;
 
 /**

@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.dao.user.entity;
+package com.easy555.uc.dao.organization.entity;
 
 import java.util.Date;
 

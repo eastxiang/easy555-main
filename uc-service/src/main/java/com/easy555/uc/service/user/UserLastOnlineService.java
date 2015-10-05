@@ -8,8 +8,8 @@ package com.easy555.uc.service.user;
 import org.springframework.stereotype.Service;
 
 import com.easy555.common.service.BaseService;
-import com.easy555.uc.dao.user.entity.UserLastOnline;
-import com.easy555.uc.dao.user.repository.UserLastOnlineRepository;
+import com.easy555.uc.dao.organization.entity.UserLastOnline;
+import com.easy555.uc.dao.organization.repository.UserLastOnlineRepository;
 
 /**
  * <p>User: Zhang Kaitao

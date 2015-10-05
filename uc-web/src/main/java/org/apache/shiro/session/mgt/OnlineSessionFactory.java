@@ -6,7 +6,8 @@
 package org.apache.shiro.session.mgt;
 
 import com.easy555.common.utils.IpUtils;
-import com.easy555.uc.dao.user.entity.UserOnline;
+import com.easy555.uc.dao.organization.entity.UserOnline;
+
 import org.apache.shiro.session.Session;
 import org.apache.shiro.web.session.mgt.WebSessionContext;
 

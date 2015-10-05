@@ -7,8 +7,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.easy555.common.entity.Permission;
-import com.easy555.uc.dao.resource.entity.Resource;
-import com.easy555.uc.dao.resource.repository.ResourceRepository;
+import com.easy555.uc.dao.integration.entity.Resource;
+import com.easy555.uc.dao.integration.repository.ResourceRepository;
 import com.easy555.uc.dao.test.BaseTest;
 
 public class ResourceTest extends BaseTest {

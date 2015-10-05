@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.dao.resource.entity;
+package com.easy555.uc.dao.integration.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

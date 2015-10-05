@@ -15,8 +15,8 @@ import org.apache.shiro.subject.Subject;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.easy555.uc.dao.user.entity.User;
-import com.easy555.uc.dao.user.entity.UserStatus;
+import com.easy555.uc.dao.organization.entity.User;
+import com.easy555.uc.dao.organization.entity.UserStatus;
 import com.easy555.uc.web.test.BaseUserTest;
 
 

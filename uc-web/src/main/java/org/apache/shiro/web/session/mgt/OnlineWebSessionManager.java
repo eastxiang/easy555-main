@@ -24,7 +24,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
 import com.easy555.common.Constants;
-import com.easy555.uc.dao.user.entity.UserOnline;
+import com.easy555.uc.dao.organization.entity.UserOnline;
 import com.easy555.uc.service.user.UserOnlineService;
 import com.google.common.collect.Lists;
 

@@ -17,8 +17,8 @@ import org.apache.shiro.web.util.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.easy555.common.Constants;
-import com.easy555.uc.dao.user.entity.User;
-import com.easy555.uc.dao.user.entity.UserStatus;
+import com.easy555.uc.dao.organization.entity.User;
+import com.easy555.uc.dao.organization.entity.UserStatus;
 import com.easy555.uc.service.user.UserService;
 
 /**

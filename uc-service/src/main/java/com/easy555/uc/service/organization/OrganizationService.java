@@ -8,6 +8,7 @@ package com.easy555.uc.service.organization;
 import com.easy555.common.plugin.serivce.BaseTreeableService;
 import com.easy555.uc.dao.organization.entity.Organization;
 import com.easy555.uc.dao.organization.repository.OrganizationRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

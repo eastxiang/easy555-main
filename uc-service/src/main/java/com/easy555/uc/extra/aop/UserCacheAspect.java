@@ -6,7 +6,8 @@
 package com.easy555.uc.extra.aop;
 
 import com.easy555.common.cache.BaseCacheAspect;
-import com.easy555.uc.dao.user.entity.User;
+import com.easy555.uc.dao.organization.entity.User;
+
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;

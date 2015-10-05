@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.easy555.common.utils.security.Md5Utils;
-import com.easy555.uc.dao.user.entity.User;
+import com.easy555.uc.dao.organization.entity.User;
 import com.easy555.uc.service.user.exception.UserPasswordNotMatchException;
 import com.easy555.uc.service.user.exception.UserPasswordRetryLimitExceedException;
 import com.easy555.uc.service.user.utils.UserLogUtils;

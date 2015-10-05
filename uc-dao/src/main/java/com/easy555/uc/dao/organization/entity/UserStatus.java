@@ -1,4 +1,4 @@
-package com.easy555.uc.dao.user.entity;
+package com.easy555.uc.dao.organization.entity;
 
 /**
  * <p>User: Zhang Kaitao

@@ -11,8 +11,8 @@ import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.easy555.uc.dao.organization.entity.User;
 import com.easy555.uc.dao.permission.entity.Role;
-import com.easy555.uc.dao.user.entity.User;
 import com.easy555.uc.service.permission.RoleService;
 import com.easy555.uc.service.resource.ResourceService;
 import com.google.common.base.Function;

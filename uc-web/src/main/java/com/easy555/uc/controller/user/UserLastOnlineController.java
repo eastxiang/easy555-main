@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.easy555.common.web.controller.BaseCRUDController;
-import com.easy555.uc.dao.user.entity.UserLastOnline;
+import com.easy555.uc.dao.organization.entity.UserLastOnline;
 
 /**
  * <p>User: Zhang Kaitao

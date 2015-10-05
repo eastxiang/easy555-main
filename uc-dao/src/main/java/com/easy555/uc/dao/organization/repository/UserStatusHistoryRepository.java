@@ -3,10 +3,10 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.dao.user.repository;
+package com.easy555.uc.dao.organization.repository;
 
 import com.easy555.common.repository.BaseRepository;
-import com.easy555.uc.dao.user.entity.UserStatusHistory;
+import com.easy555.uc.dao.organization.entity.UserStatusHistory;
 
 /**
  * <p>User: Zhang Kaitao

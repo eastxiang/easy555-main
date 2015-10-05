@@ -14,7 +14,7 @@ import org.apache.shiro.session.mgt.OnlineSession;
 import org.apache.shiro.session.mgt.OnlineSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.easy555.uc.dao.user.entity.UserOnline;
+import com.easy555.uc.dao.organization.entity.UserOnline;
 import com.easy555.uc.service.user.UserOnlineService;
 
 /**

@@ -10,8 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.easy555.common.web.controller.BaseCRUDController;
-import com.easy555.uc.dao.user.entity.UserStatus;
-import com.easy555.uc.dao.user.entity.UserStatusHistory;
+import com.easy555.uc.dao.organization.entity.UserStatus;
+import com.easy555.uc.dao.organization.entity.UserStatusHistory;
 
 /**
  * <p>User: Zhang Kaitao

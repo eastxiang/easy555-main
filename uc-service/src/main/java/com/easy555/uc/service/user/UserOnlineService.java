@@ -13,8 +13,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.easy555.common.service.BaseService;
-import com.easy555.uc.dao.user.entity.UserOnline;
-import com.easy555.uc.dao.user.repository.UserOnlineRepository;
+import com.easy555.uc.dao.organization.entity.UserOnline;
+import com.easy555.uc.dao.organization.repository.UserOnlineRepository;
 
 /**
  * <p>User: Zhang Kaitao
