@@ -20,7 +20,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>cas-server-web</artifactId>
 	<packaging>war</packaging>
-	<name>Apereo CAS Web Application</name>
 	<dependencies>
 		<dependency>
 			<groupId>org.jasig.cas</groupId>
@@ -121,6 +120,7 @@
 	<properties>
 		<cs.dir>${project.basedir}</cs.dir>
 	</properties>
+	<name>cas-server-web</name>
 </project>
 
 

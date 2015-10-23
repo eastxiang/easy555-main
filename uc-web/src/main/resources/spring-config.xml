@@ -195,7 +195,7 @@
     </bean>
 
     <import resource="spring-config-cache.xml"/>
-    <import resource="spring-config-shiro.xml"/>
+    <!-- <import resource="spring-config-shiro.xml"/> -->
     <import resource="spring-config-task.xml"/>
     <import resource="spring-config-monitor.xml"/>
    <!--  <import resource="spring-speed-up.xml"/> -->

@@ -41,7 +41,7 @@ public class UserCacheAspect extends BaseCacheAspect {
     /**
      * 匹配用户Service
      */
-    @Pointcut(value = "target(com.easy555.uc.service.user.UserService)")
+    @Pointcut(value = "target(com.easy555.uc.service.organization.UserService)")
     private void userServicePointcut() {
     }
 
