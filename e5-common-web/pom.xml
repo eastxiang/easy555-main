@@ -58,6 +58,11 @@
 			<artifactId>spring-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+		</dependency>
+
 		<!-- spring mvc jar包 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
