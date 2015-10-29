@@ -1,4 +1,4 @@
-package com.easy555.uc.controller.user;
+package com.easy555.uc.controller.index;
  
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,9 +11,9 @@ public class IndexController {
 	@RequestMapping("/index") 
     public String index(Model model) { 
     	
-		model.addAttribute("message", "test");
+		model.addAttribute("message", "xiangdong!");
 		
 		
-        return "index";
+        return "index/index";
     } 
 }

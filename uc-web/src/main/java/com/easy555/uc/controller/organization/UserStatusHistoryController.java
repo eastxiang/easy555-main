@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.easy555.uc.controller.user;
+package com.easy555.uc.controller.organization;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
