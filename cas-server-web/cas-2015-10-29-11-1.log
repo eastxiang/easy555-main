@@ -1,0 +1,14 @@
+2015-10-29 11:39:19,661 INFO [org.jasig.cas.CasEnvironmentContextListener] - 
+******************** Welcome to CAS ********************
+CAS Version: null
+Java Home: /Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre
+Java Vendor: Oracle Corporation
+Java Version: 1.7.0_67
+OS Architecture: x86_64
+OS Name: Mac OS X
+OS Version: 10.10
+*******************************************************
+
+2015-10-29 11:39:22,990 INFO [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Starting Quartz Scheduler now
+2015-10-29 11:39:24,240 INFO [org.jasig.cas.services.DefaultServicesManagerImpl] - Loaded 2 services.
+2015-10-29 11:39:25,761 INFO [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Starting Quartz Scheduler now
