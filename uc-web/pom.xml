@@ -14,6 +14,12 @@
 	<name>easy555 uc-web</name>
 	<url>www.easy555.com</url>
 
+	<properties>
+		<web.dir>${project.build.directory}/${project.build.finalName}/WEB-INF</web.dir>
+		<web.static.dir>${web.dir}/static</web.static.dir>
+		<application.js.name>application-${project.version}.min.js</application.js.name>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.easy555</groupId>
@@ -36,6 +42,97 @@
 	<build>
 		<finalName>uc-web</finalName>
 		<plugins>
+
+			<!-- 压缩 javascript css -->
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>yuicompressor-maven-plugin</artifactId>
+				<version>1.5.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compress</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<!-- 忽略 js 错误警告 -->
+					<jswarn>false</jswarn>
+					<nosuffix>true</nosuffix>
+					<linebreakpos>-1</linebreakpos>
+					<includes>
+						<include>**/js/**/**.js</include>
+					</includes>
+					<excludes>
+						<exclude>**/**min.js</exclude>
+					</excludes>
+					<aggregations>
+						<!-- application-version-min.js aggregation -->
+						<aggregation>
+							<removeIncluded>true</removeIncluded>
+							<insertNewLine>true</insertNewLine>
+							<inputDir>${web.static.dir}</inputDir>
+							<output>${web.static.dir}/js/${application.js.name}</output>
+							<includes>
+								<include>js/app/*.js</include>
+							</includes>
+						</aggregation>
+					</aggregations>
+				</configuration>
+			</plugin>
+
+			<!-- 替换资源相关字符串 -->
+			<plugin>
+				<groupId>com.google.code.maven-replacer-plugin</groupId>
+				<artifactId>replacer</artifactId>
+				<version>1.5.3</version>
+				<executions>
+					<execution>
+						<id>replace-js</id>
+						<phase>package</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>${web.dir}/ftl/index/index.ftl</file>
+							<replacements>
+								<replacement>
+									<token>
+					                    <![CDATA[
+					                    <!-- mergeTo:([^\s]*) -->(.*?)<!-- mergeTo -->
+					                    ]]>
+									</token>
+									<value>
+					                    <![CDATA[
+					                    <script type="text/javascript" src="${application.js.name}" ></script>
+					                    ]]>	
+										<!-- <script type="text/javascript" src="$1" ></script> -->
+									</value>
+								</replacement>
+							</replacements>
+							<regexFlags>
+								<regexFlag>CASE_INSENSITIVE</regexFlag>
+								<regexFlag>DOTALL</regexFlag>
+							</regexFlags>
+						</configuration>
+					</execution>
+					<execution>
+						<id>replace-version</id>
+						<phase>package</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>${web.dir}/classes/resources.properties</file>
+							<regex>false</regex>
+							<token>--CURRENT_VERSION--</token>
+							<value>${project.version}</value>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
@@ -44,6 +141,7 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
@@ -52,6 +150,7 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>native2ascii-maven-plugin</artifactId>
@@ -81,9 +180,10 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+
 		</plugins>
 
-		<!-- 只有设置这个才能替换变量 xiangdong -->
+		<!-- 只有设置这个才能使用POM定义属性替换资源的变量 xiangdong -->
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
