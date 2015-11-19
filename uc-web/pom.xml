@@ -4,7 +4,8 @@
 	<parent>
 		<groupId>com.easy555</groupId>
 		<artifactId>easy555-main</artifactId>
-		<version>0.0.3-SNAPSHOT</version>
+		<!-- 下面的 parent 注释用于shell 替换不要去掉 -->
+		<version><!--parent-->0.1.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
@@ -106,7 +107,7 @@
 									<value>
 					                    <![CDATA[
 					                    <script type="text/javascript" src="${application.js.name}" ></script>
-					                    ]]>	
+					                    ]]>
 										<!-- <script type="text/javascript" src="$1" ></script> -->
 									</value>
 								</replacement>
@@ -218,7 +219,7 @@
 				<jpa.databasePlatform>org.hibernate.dialect.MySQL5InnoDBDialect</jpa.databasePlatform>
 				<log.dir>target/logs/e5</log.dir>
 
-				<shiro.uid.cookie.domain></shiro.uid.cookie.domain>
+				<shiro.uid.cookie.domain />
 				<shiro.uid.cookie.path>/</shiro.uid.cookie.path>
 			</properties>
 		</profile>
