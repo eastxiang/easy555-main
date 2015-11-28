@@ -6,13 +6,13 @@
 		<groupId>com.easy555</groupId>
 		<artifactId>easy555-parent</artifactId>
 		<!-- 下面的 parent 注释用于shell 替换不要去掉 -->
-		<version><!--parent-->0.6.7-SNAPSHOT</version>
+		<version><!--parent-->0.4.0.0-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>easy555-main</artifactId>
-	<version><!--current-->0.1.1-SNAPSHOT</version>
+	<version><!--current-->0.2.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>main</name>
 	<url>www.easy555.com</url>
