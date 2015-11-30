@@ -201,6 +201,7 @@ public abstract class BaseMovableService<M extends BaseEntity & Movable, ID exte
         from.setWeight(newWeight);
     }
 
+	@SuppressWarnings("unchecked")
 	public void reweight() {
         int batchSize = 100;
         Sort sort = new Sort(Sort.Direction.DESC, "weight");
@@ -212,7 +213,7 @@ public abstract class BaseMovableService<M extends BaseEntity & Movable, ID exte
 
             RepositoryHelper.clear();
 
-            if (page.isLastPage()) {
+            if (page.isLast()) {
                 break;
             }
 

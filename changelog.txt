@@ -1,0 +1,11 @@
+Easy555-main Changelog
+=========================
+
+Changes in version 0.2.0 (2015-11-30)
+-------------------------------------
+* e5.common spring data jpa upgrade version 1.9
+
+Changes in version 0.2.0 (2015-11-01)
+-------------------------------------
+0.1.0
+	create project.

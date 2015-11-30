@@ -97,6 +97,5 @@
                   value="com.easy555.common.repository.RepositoryHelper.setEntityManagerFactory"/>
         <property name="arguments" ref="entityManagerFactory"/>
     </bean>
-
-
+    
 </beans>
