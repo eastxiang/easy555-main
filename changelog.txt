@@ -9,3 +9,4 @@ Changes in version 0.2.0 (2015-11-01)
 -------------------------------------
 0.1.0
 	create project.
+	参考：https://github.com/zhangkaitao/es
