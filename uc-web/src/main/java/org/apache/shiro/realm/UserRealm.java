@@ -141,5 +141,4 @@ public class UserRealm extends AuthorizingRealm {
 				getName());
 		return info;
 	}
-
 }
