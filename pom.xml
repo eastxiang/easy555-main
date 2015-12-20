@@ -23,7 +23,6 @@
 		<module>uc-dao</module>
 		<module>uc-service</module>
 		<module>uc-web</module>
-		<module>cas-server-web</module>
 	</modules>
 
 	<scm>

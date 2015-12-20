@@ -139,6 +139,7 @@ public class UserRealm extends AuthorizingRealm {
 
 		SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user.getUsername(), password.toCharArray(),
 				getName());
+		
 		return info;
 	}
 }

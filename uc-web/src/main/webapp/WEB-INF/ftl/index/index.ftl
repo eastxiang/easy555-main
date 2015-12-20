@@ -7,9 +7,10 @@
 	<script type="text/javascript" src="app/js/app2.js"></script>
 	<!-- mergeTo -->
 	</head>
-<body>
+	<body>
 	Hello ${message}!
-</body>
-
+	</body>
+	
+ 
 </html>
  

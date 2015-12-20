@@ -9,7 +9,11 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-             classpath:spring-config.xml
+			<!-- e5-common project file-->
+			classpath:spring-common.xml,
+			<!-- e5-common-web project file-->
+			classpath:spring-common-web.xml,
+            classpath:spring-config.xml
          </param-value>
 	</context-param>
 	<listener>
